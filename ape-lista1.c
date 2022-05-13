@@ -187,7 +187,6 @@ int questoes(){
         printf("\n\nQuestao inválida\n\n");
     }
     
-
     return 0;
 }
 int main(){
