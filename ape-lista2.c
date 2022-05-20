@@ -13,7 +13,32 @@ int questao8(){
 	return 0;
 }
 int questao7(){
-	
+	//questao 7
+    float np1, np2, np3, media;
+    fflush(stdin);
+    printf("Digite a primeira nota: ");
+    scanf("%f", &np1);
+    fflush(stdin);
+    printf("Digite a segunda nota: ");
+    scanf("%f", &np2);
+    
+    media = (np1 + np2) / 2;
+
+    if(media >= 7){
+        printf("Voce passou para o proximo concurso!\n\n");
+        fflush(stdin);
+        printf("Digite o valor da ultima prova:\n");
+        scanf("%f", &np3);
+        if(np3 >= 8){
+            printf("Voce passou no concurso!\n\n");
+        }
+        else{
+            printf("Nao foi dessa vez!\n\n");
+        }
+    }else{
+        printf("Nao foi dessa vez!\n\n");
+    }
+
 	return 0;
 }
 int questao6(){
