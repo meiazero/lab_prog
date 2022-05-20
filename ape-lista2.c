@@ -9,8 +9,16 @@ int questao9(){
 	return 0;
 }
 int questao8(){
-	
-	return 0;
+    //questao 8
+    char nome[50], classe;
+    int sal = 260, vpv = 5, pf;
+	fflush(stdin);
+    printf("Digite seu nome: ");
+    scanf("%s", &nome);
+    printf("Digite a quantidade que voce produziu no mes: ");
+    scanf("%d", &pf);
+    
+    return 0;
 }
 int questao7(){
 	//questao 7
