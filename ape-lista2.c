@@ -71,8 +71,8 @@ int questao5(){
 	printf("Digite o valor de 'c'\n");
 	scanf("%f", &c);
 	
-	delta = pow(b, 2) - 4 * a * c;
-	if(delta<0){
+	delta = (b * b) - 4 * a * c;
+    if(delta<0){
 		printf("Equação com raizes negativas!\n");
 	} else{
 		x1 = - ((b) - sqrt(delta))/ (2 * a);
