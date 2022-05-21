@@ -28,7 +28,7 @@ int questao1(){
                 fflush(stdin);
                 printf("Qual sua profissao: ");
                 scanf("%s", &job);
-                if(job[0] =! ""){
+                if(job[12] =! ""){
                     fflush(stdin);
                     printf("Qual seu peso: ");
                     scanf("%f", &weight);
@@ -40,7 +40,7 @@ int questao1(){
                             fflush(stdin);
                             printf("Qual o nome da sua Rua: ");
                             scanf("%s", &street);
-                            if(street[0] =! ""){
+                            if(street[30] =! ""){
                                 fflush(stdin);
                                 printf("Qual o nome do seu bairro: ");
                                 scanf("%s", &district);
@@ -68,14 +68,12 @@ int questoes(){
 
     printf("\n Escolha uma questao: \n\n");
     //lista de questoes.
-    printf("1 - Faça um algoritmo para ler as seguintes informações de uma pessoa:\nNome, Idade, Sexo, Peso, Altura, Profissão, Rua, Bairro, Cidade, Estado, CEP, Telefone.\n");
+    printf("1 - Faça um algoritmo para ler as seguintes informações de uma pessoa:\nNome, Idade, Sexo, Peso, Altura, Profissão, Rua, Bairro, Cidade, Estado, CEP, Telefone.\n\n");
     printf(" 0 - Sair\n\n");
     
     printf("\n\nDigite a questao -> ");
     scanf("%d", &questao);
     // chamada da questao
-   	
-   	
         switch(questao){
             case 0: 
                 k = 1;
