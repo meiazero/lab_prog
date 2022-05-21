@@ -5,18 +5,45 @@
 
 
 int questao9(){
-	
+	//questao 9
+    float peso, altura , imc;
+    fflush(stdin);
+    printf("\n\nDigite o seu peso: ");
+    scanf("%f", &peso);
+    fflush(stdin);
+    printf("Digite a sua altura: ");
+    scanf("%f", &altura);
+    imc = peso / (altura * altura);
+    if(imc < 26){
+        printf("seu IMC é %.2f e seu grau de obesidade e: normal.\n\n", imc);
+    }else if(26 > imc > 30){
+        printf("seu IMC é %.2f e seu grau de obesidade e: obeso.\n\n", imc);
+    }else{
+        printf("seu IMC é %.2f e seu grau de obesidade e: obesidade morbida.\n\n", imc);
+    }
+
 	return 0;
 }
 int questao8(){
     //questao 8
     char nome[50], classe;
-    int sal = 260, vpv = 5, pf;
+    //sal = salario,salt = salario total, vpv = valor por vendas, pf = produtos fabricados.
+    int vpv = 5, pf;
+    float sal = 260, salt;
 	fflush(stdin);
     printf("Digite seu nome: ");
     scanf("%s", &nome);
     printf("Digite a quantidade que voce produziu no mes: ");
     scanf("%d", &pf);
+    if(pf <= 30){
+        classe = 'A';
+        printf("\n\nOla %s sua classe e %c e seu salário e %d.\n\n", nome, classe, sal);
+    }else{
+        classe = 'B';
+        salt = sal + (pf * vpv);
+        printf("Ola %s, sua classe e %c e seu salario e %.2f\n\n", nome, classe, salt);
+    }
+
     
     return 0;
 }
