@@ -12,13 +12,13 @@ int questao12(){
     scanf("%d", &number);
     
     if(number < 0 && number % 2 == 0){//numero menor que zero e par
-        printf("O numero %d e negativo e par\n", number);
+        printf("\n\nO numero %d e negativo e par\n", number);
     }else if(number > 0 && number % 2 == 0){//numero maior que zero e par
-        printf("O numero %d e positivo e par\n", number);
+        printf("\n\nO numero %d e positivo e par\n", number);
     }else if(number < 0 && number % 2 != 0){//numero menor que zero e par
-        printf("O numero %d e negativo e impar\n", number);
+        printf("\n\nO numero %d e negativo e impar\n", number);
     }else{//numero maior que zero e impar
-        printf("O numero %d e positivo e impar\n", number);
+        printf("\n\nO numero %d e positivo e impar\n", number);
     }
 
     return 0;
