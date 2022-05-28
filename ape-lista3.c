@@ -3,8 +3,98 @@
 #include <ctype.h>
 #include <locale.h>
 
+int questao16(){
+    //questao 16
+    
 
 
+    return 0;
+}
+int questao15(){
+    // questao 15
+    char codigo[5];
+    int quantidade;
+    float total, preco;
+
+    printf("Digite o codigo do produto: ");
+    scanf("\n%[^\n]s", &codigo);
+    // printf("codigo: %s\n", codigo);
+
+    if(codigo == "1001"){
+        printf("codigo: %s\n", codigo);
+    }else if(codigo == "1324"){
+        printf("codigo: %s\n", codigo);
+    }else if(codigo == "6548"){
+        printf("codigo: %s\n", codigo);
+    }else if(codigo == "0987"){
+        printf("codigo: %s\n", codigo);
+    }else if(codigo == "7623"){
+        printf("codigo: %s\n", codigo);
+    }else{
+        printf("codigo invalido\n");
+    }
+    // printf("Digite a quantidade comprada: ");
+    // scanf("%d", &quantidade);
+
+    // total = quantidade * 5.32;
+
+    // preco = 5.32;
+    // printf("\n\ncodigo produto: %s\npreco unitario: $%3.2f\nquantidade: %d\npreco total: %3.2f\n\n", codigo, preco, quantidade, total);
+
+
+    return 0;
+}
+int questao14(){
+    // questao 14
+    char nome[100];
+    float salario, salario_reajustado;
+    printf("Digite o seu nome: ");
+    scanf("%s", nome);
+    printf("Digite seu salario: ");
+    scanf("%f", &salario);
+    
+    if (salario > 0 && salario < 1000){
+        salario_reajustado = salario + (salario * 0.20);
+        printf("\n\nO seu salario sem aumento e: %.2f\n", salario);
+        printf("O seu salario com aumento e: %.2f\n\n", salario_reajustado);
+    }else if(salario > 1000.01 && salario < 5000){
+        salario_reajustado = salario + (salario * 0.10);
+        printf("\n\nO seu salario sem aumento e: %.2f\n", salario);
+        printf("O seu salario com aumento e: %.2f\n\n", salario_reajustado);
+    }else if(salario > 5000){
+        salario_reajustado = salario + (salario * 0);
+        printf("\n\nO seu salario sem aumento e: %.2f\n", salario);
+        printf("O seu salario com aumento e: %.2f\n\n", salario_reajustado);
+    }else{
+        printf("\n\nSalario invalido\n\n");
+    }
+
+    return 0;
+}
+int questao13(){
+    // questao 13   
+    char tipo;
+    float note, media;
+    
+    for(int i = 1; i < 4; i++){
+        printf("Digite sua %dª nota: ", i);
+        scanf("%f", &tipo);
+        media += note;
+    }
+    media /= 3;
+    if (media < 5){
+        tipo = 'C';
+        printf("\n\nO conceito da sua nota é %c\n\n", tipo);
+    }else if( 5 >= media < 8){
+        tipo = 'B';
+        printf("\n\nO conceito da sua nota é %c\n\n", tipo);
+    }else{
+        tipo = 'A';
+        printf("\n\nO conceito da sua nota é %c\n\n", tipo);
+    }
+
+    return 0;
+}
 int questao12(){
     // questao 12
     int number;
@@ -73,8 +163,6 @@ int questao9(){
     media = (nt1 + nt2 + nt3) / 3;
     if (media > 7){
         printf("\n%s, voce foi aprovado com media %.2f\n\n", nome, media);
-    }else if(5 < media ){
-        printf("\n%s, voce esta de recuperacao com media %.2f\n\n", nome, media);
     }else{
         printf("\n%s, voce foi reprovado com media %.2f\n\n", nome, media);
     }
@@ -236,12 +324,12 @@ int questoes(){
     printf("\n Escolha uma questao: \n\n");
     //lista de questoes.
     printf("1 - Faça um algoritmo para ler as seguintes informações de uma pessoa:\nNome, Idade, Sexo, Peso, Altura, Profissão, Rua, Bairro, Cidade, Estado, CEP, Telefone.\n\n");
-    printf("2 - Faça um algoritmo que leia a idade de uma pessoa expressa em anos,\n meses e dias e mostre-a expressa apenas em dias.\n\n\n");
+    printf("2 - Faça um algoritmo que leia a idade de uma pessoa expressa em anos,\n meses e dias e mostre-a expressa apenas em dias.\n\n");
     printf("3 - Faça um algoritmo para ler a base e a altura de um triângulo. Em seguida,\nescreva a área do mesmo\nObs.: Área = ( Base * Altura ) / 2\n\n");
     printf("4 - Escreva um agoritmo para calcular a media ponderada de 2 notas dadas.\n(nota 1 = peso 6 e nota 2 = peso 4).\n\n");
     printf("5 - Faça um algoritmo que calcule a media aritmetica de 4 valores inteiros.\n\n");
     printf("6 - Faça um algoritmo que leia dois valores inteiros A e B se os valores forem iguais devera se somar os dois, caso contrario multiplique A por B\n ao final do calculo atribuir o valor para um a variavel C.\n\n");
-    printf("7 - Dados as seguintes informacoes de um funcionario: Nome, Idade, Cargo e seu salario bruto, considere: \n a)O salario bruto teve um reajuste de 38%.\n b)O funcionario recebera uma gratificacao de 20%, do salario bruto.\n c)O salario total e descontado em 15%.\n ");
+    printf("7 - Dados as seguintes informacoes de um funcionario: Nome, Idade, Cargo e seu salario bruto, considere: \n a)O salario bruto teve um reajuste de 38%.\n b)O funcionario recebera uma gratificacao de 20%, do salario bruto.\n c)O salario total e descontado em 15%.\n");
     printf("8 - Faça um algoritmo para:\n - imprimir Nome, cidade, e cargo.\n - Imprimir o salario bruto.\n - Imprimir o salario liquido.\n\n");
     printf("9 - Faça um algoritmo que leia os valores A, B, C e diga se a soma de A + B e menor que C.\n\n");
     printf("10 - Faça um algoritmo que leia o nome e as tres notas de uma diciplina de\n um aluno e ao final escreva o nome do aluno, sua media e se foi aprovado com nota maior que 8.\n\n");
@@ -249,7 +337,8 @@ int questoes(){
     printf("12 - Escreva um algoritmo para ler um numero e determinar se ele e maior, igual ou menor que 0.\n\n");
     printf("13 - Faça um algoritmo que leia um numero inteiro e mostre uma mensagem indicando se este numero e par ou impar,\n e se e positivo ou negativo.");
     printf("14 - Faça um algoritmo que, dado as tres notas de um aluno, determine e exiba a sua media final, e o seu conceito,\n sabendo se que:\n -A media final e qualculada pela media aritmetica das tres notas;\n -O conceito e determinado com base:\n -- >= 8 | A | aprovado\n -- <= 5 & > 8 | B | recuperacao\n < 5 | C | reprovado\n\n");
-    printf("15 - ");
+    printf("15 -  O Tupi Futebol Clube deseja aumentar o salário de seus jogadores.\n O reajuste deve obedecer a seguinte tabela:\n salario entre 0 e 1000 aumento de 20%\n salario entre 1000.01 e 5000 aumento de 10%\n salario maior que 5000 sem aumento.\n Escrever um algoritmo que leia o nome e o salário atual de um jogador, e exiba\n o nome, o salário atual e o salário reajustado.\n\n");
+    printf("16 - Um vendedor necessita de um algoritmo que calcule o preço total devido por um cliente.\n O algoritmo deve receber o código de um produto e a quantidade comprada e calcular o preço total, usando a tabela abaixo:\n\tcodigo:\t\tpreço:\n\t1001\t\t$5.32\n\t1324\t\t$6.45\n\t6548\t\t$2.37\n\t0987\t\t$5.32\n\t7623\t\t6.45\n\n");
 
     printf(" 0 - Sair\n\n");
     
@@ -297,7 +386,16 @@ int questoes(){
                 questao12();
                 break;
             case 13:
-                questao12();
+                questao13();
+                break;
+            case 14:
+                questao14();
+                break;
+            case 15:
+                questao15();
+                break;
+            case 16:
+                questao16();
                 break;
             default:
                 printf("\n\nQuestao inválida!\n\n");
