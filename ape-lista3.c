@@ -3,15 +3,52 @@
 #include <ctype.h>
 #include <locale.h>
 
-int questao16(){
-    //questao 16
+
+int questao17(){
+    // questao 18
+    float hora_inicio, hora_fim, duracao;
     
+    printf("Digite a hora de inicio: ");
+    scanf("%f", &hora_inicio);
+    printf("Digite a hora de fim: ");
+    scanf("%f", &hora_fim);
+
+    duracao = hora_fim - hora_inicio;
+
+    if(duracao <= 0){
+        duracao = 24 + duracao;
+        printf("A duração do jogo foi de %.2f horas.\n", duracao);
+    }else{
+        printf("A duração do jogo foi de %.2f horas.\n", duracao);
+    }
+    return 0;
+}
+int questao16(){
+    //questao 17
+    float saldo_medio, credito;
+    printf("Digite o saldo medio: ");
+    scanf("%f", &saldo_medio);
+    if (saldo_medio > 0 && saldo_medio <= 200){
+        credito = 0;
+        printf("\n\nO saldo medio e de: %.2f\n e seu valor de credito e: %3.2f\n", saldo_medio, credito );
+    }else if(saldo_medio >=201 && saldo_medio <= 400){
+        credito = 0.2 * saldo_medio;
+        printf("\n\nO saldo medio e de: %.2f\n e seu valor de credito e: %3.2f\n", saldo_medio, credito );
+    }else if(saldo_medio >=401 && saldo_medio <= 600){
+        credito = 0.3 * saldo_medio;
+        printf("O saldo medio e de: %.2f\n e seu valor de credito e: %3.2f\n", saldo_medio, credito );
+    }else if(saldo_medio >=601){
+        credito = 0.4 * saldo_medio;
+        printf("\n\nO saldo medio e de: %.2f\n e seu valor de credito e: %3.2f\n", saldo_medio, credito );
+    }else{
+        printf("\n\nSaldo invalido!");
+    }
 
 
     return 0;
 }
 int questao15(){
-    // questao 15
+    // questao 16
     char codigo[5];
     int quantidade;
     float total, preco;
@@ -45,7 +82,7 @@ int questao15(){
     return 0;
 }
 int questao14(){
-    // questao 14
+    // questao 15
     char nome[100];
     float salario, salario_reajustado;
     printf("Digite o seu nome: ");
@@ -72,7 +109,7 @@ int questao14(){
     return 0;
 }
 int questao13(){
-    // questao 13   
+    // questao 14   
     char tipo;
     float note, media;
     
@@ -96,7 +133,7 @@ int questao13(){
     return 0;
 }
 int questao12(){
-    // questao 12
+    // questao 13
     int number;
     printf("Digite um numero: ");
     scanf("%d", &number);
@@ -114,7 +151,7 @@ int questao12(){
     return 0;
 }
 int questao11(){
-    // questao 11
+    // questao 12
     int number;
     printf("Digite um numero: ");
     scanf("%d", &number);   
@@ -131,7 +168,7 @@ int questao11(){
     return 0;
 }
 int questao10(){
-    // questao 10
+    // questao 11
     int a, b, c;
     printf("Digite o valor de a: ");
     scanf("%d", &a);
@@ -148,7 +185,7 @@ int questao10(){
     return 0;
 }
 int questao9(){
-    //questao 9
+    //questao 10
     char nome[40];
     float nt1, nt2, nt3, media;
     printf("Digite seu nome: ");
@@ -170,7 +207,7 @@ int questao9(){
     return 0;
 }
 int questao8(){
-    //questao 8
+    //questao 9
     float a, b, c, soma;
     printf("Digite o valor de a: ");
     scanf("%d", &a);
@@ -188,7 +225,7 @@ int questao8(){
     return 0;
 }
 int questao7(){
-    // questao 7
+    // questao 7 e 7.1
     char nome[40], cargo[100];
     float salario, salario_final;
     int idade;
@@ -330,7 +367,7 @@ int questoes(){
     printf("5 - Faça um algoritmo que calcule a media aritmetica de 4 valores inteiros.\n\n");
     printf("6 - Faça um algoritmo que leia dois valores inteiros A e B se os valores forem iguais devera se somar os dois, caso contrario multiplique A por B\n ao final do calculo atribuir o valor para um a variavel C.\n\n");
     printf("7 - Dados as seguintes informacoes de um funcionario: Nome, Idade, Cargo e seu salario bruto, considere: \n a)O salario bruto teve um reajuste de 38%.\n b)O funcionario recebera uma gratificacao de 20%, do salario bruto.\n c)O salario total e descontado em 15%.\n");
-    printf("8 - Faça um algoritmo para:\n - imprimir Nome, cidade, e cargo.\n - Imprimir o salario bruto.\n - Imprimir o salario liquido.\n\n");
+    printf("7.1 - Faça um algoritmo para:\n - imprimir Nome, cidade, e cargo.\n - Imprimir o salario bruto.\n - Imprimir o salario liquido.\n\n");
     printf("9 - Faça um algoritmo que leia os valores A, B, C e diga se a soma de A + B e menor que C.\n\n");
     printf("10 - Faça um algoritmo que leia o nome e as tres notas de uma diciplina de\n um aluno e ao final escreva o nome do aluno, sua media e se foi aprovado com nota maior que 8.\n\n");
     printf("11 - Faça um algoritmo que leia dois valores inteiros A e B se os valores forem iguais devera se somar os dois, caso contrario multiplique A por B\n ao final do calculo atribuir o valor para um a variavel C.\n\n");
@@ -339,7 +376,45 @@ int questoes(){
     printf("14 - Faça um algoritmo que, dado as tres notas de um aluno, determine e exiba a sua media final, e o seu conceito,\n sabendo se que:\n -A media final e qualculada pela media aritmetica das tres notas;\n -O conceito e determinado com base:\n -- >= 8 | A | aprovado\n -- <= 5 & > 8 | B | recuperacao\n < 5 | C | reprovado\n\n");
     printf("15 -  O Tupi Futebol Clube deseja aumentar o salário de seus jogadores.\n O reajuste deve obedecer a seguinte tabela:\n salario entre 0 e 1000 aumento de 20%\n salario entre 1000.01 e 5000 aumento de 10%\n salario maior que 5000 sem aumento.\n Escrever um algoritmo que leia o nome e o salário atual de um jogador, e exiba\n o nome, o salário atual e o salário reajustado.\n\n");
     printf("16 - Um vendedor necessita de um algoritmo que calcule o preço total devido por um cliente.\n O algoritmo deve receber o código de um produto e a quantidade comprada e calcular o preço total, usando a tabela abaixo:\n\tcodigo:\t\tpreço:\n\t1001\t\t$5.32\n\t1324\t\t$6.45\n\t6548\t\t$2.37\n\t0987\t\t$5.32\n\t7623\t\t6.45\n\n");
-
+    printf("17\n");
+    printf("18\n");
+    printf("19\n");
+    printf("20\n");
+    printf("21\n");
+    printf("22\n");
+    printf("23\n");
+    printf("24\n");
+    printf("25\n");
+    printf("26\n");
+    printf("27\n");
+    printf("28\n");
+    printf("29\n");
+    printf("30\n");
+    printf("31\n");
+    printf("32\n");
+    printf("33\n");
+    printf("34\n");
+    printf("35\n");
+    printf("36\n");
+    printf("37\n");
+    printf("38\n");
+    printf("39\n");
+    printf("40\n");
+    printf("41\n");
+    printf("42\n");
+    printf("43\n");
+    printf("44\n");
+    printf("45\n");
+    printf("46\n");
+    printf("47\n");
+    printf("48\n");
+    printf("49\n");
+    printf("50\n");
+    printf("51\n");
+    printf("52\n");
+    printf("53\n");
+    printf("54\n");
+    printf("55\n");
     printf(" 0 - Sair\n\n");
     
     printf("\n\nDigite a questao -> ");
@@ -396,6 +471,9 @@ int questoes(){
                 break;
             case 16:
                 questao16();
+                break;
+            case 17:
+                questao17();
                 break;
             default:
                 printf("\n\nQuestao inválida!\n\n");
