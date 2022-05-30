@@ -3,7 +3,24 @@
 #include <ctype.h>
 #include <locale.h>
 
-
+int questao19(){
+    
+}
+int questao18(){
+    // questao 19
+    int i;
+    float a, b ,c;
+    printf("Digite o valor de i: ");
+    scanf("%d", &i);
+    printf("digite o valor de a");
+    scanf("%f", &a);
+        printf("digite o valor de b");
+    scanf("%f", &b);
+        printf("digite o valor de c");
+    scanf("%f", &c);
+    
+    return 0;
+}
 int questao17(){
     // questao 18
     float hora_inicio, hora_fim, duracao;
