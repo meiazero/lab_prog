@@ -4,21 +4,116 @@
 #include <locale.h>
 
 int questao19(){
-    
+    // questao 20
+
+     return 0;
 }
 int questao18(){
     // questao 19
     int i;
-    float a, b ,c;
+    float a, b ,c, order[100];
+    
     printf("Digite o valor de i: ");
     scanf("%d", &i);
-    printf("digite o valor de a");
+    printf("digite o valor de a: ");
     scanf("%f", &a);
-        printf("digite o valor de b");
+    printf("digite o valor de b: ");
     scanf("%f", &b);
-        printf("digite o valor de c");
+    printf("digite o valor de c: ");
     scanf("%f", &c);
     
+    if( i == 1){
+        if(a < b){ // verifica se A é menor que B
+            order[0] = a;
+            if(b < c){ // Verifica se B é menor que C
+                order[1] = b;
+                order[2] = c;
+            }else{ // Se C for menor
+                order[1] = c;
+                order[2] = b;
+            }
+        }else if(b < c){ // Verifica se B é menor que C
+            order[0] = b;
+            if(a < c){ //Verifica se A é menor que C
+                order[1] = a;
+                order[2] = c;
+            }else{ // Se C for menor
+                order[1] = c;
+                order[2] = a;
+            }
+        }else{// Se C for o menor
+            order[0] = c;
+            if(a < b){ //Verifica se A é menor que B
+                order[1] = a;
+                order[2] = b;
+            }else{// Se B for menor
+                order[1] = b;
+                order[2] = a;
+            }
+        }
+    for (i = 0; i < 3; i++){
+        printf("\n%.2f\n", order[i]);
+    }
+
+    }else if( i == 2){
+        if(a > b){// Verifica se A é maior que B
+            order[0] = a;
+            if(b > c){// Verifica se B é maior que C
+                order[1] = b;
+                order[2] = c;
+            }else{ // Se C for maior
+                order[1] = c;
+                order[2] = b;
+            }
+        }else if(b > c){ // Verifica se B é maior que C
+            order[0] = b;
+            if(a > c){ // Verifica se A é maior que C
+                order[1] = a;
+                order[2] = c;
+            }else{ // Se C for maior
+                order[1] = c;
+                order[2] = a;
+            }
+        }else{
+            order[0] = c;
+            if(a > b){ // Verifica se A é maior que B
+                order[1] = a;
+                order[2] = b;
+            }else{ // Se B for maior
+                order[1] = b;
+                order[2] = a;
+            }
+        }
+    for (i = 0; i < 3; i++){
+        printf("\n%.2f\n", order[i]);
+    }
+    }else if (i == 3){
+        if(a > b && a > c){
+            order[1] = a;
+            if(b > c){
+                order[0] = b;
+                order[2] = c;
+            }
+        }else if(b > a && b > c){
+            order[1] = b;
+            if(a > c){
+                order[0] = a;
+                order[2] = c;
+            }
+        }else{
+            order[1] = c;
+            if(a > b){
+                order[0] = a;
+                order[2] = b;
+            }
+        }
+    for (i = 0; i < 3; i++){
+        printf("\n%.2f\n", order[i]);
+    }
+    }else{
+        printf("Error!\n");
+    }
+
     return 0;
 }
 int questao17(){
@@ -491,6 +586,12 @@ int questoes(){
                 break;
             case 17:
                 questao17();
+                break;
+            case 18:
+                questao18();
+                break;
+            case 19:
+                questao19();
                 break;
             default:
                 printf("\n\nQuestao inválida!\n\n");
