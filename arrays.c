@@ -1,7 +1,70 @@
 #include <stdio.h>
-/*int questao(){
+
+
+int questao14(){
+    printf("ainda nao implementado\n");
     return 0;
-}*/
+}
+int questao13(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao12(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao11(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao10(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao9(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao8(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao7(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao6(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao5(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao4(){
+    printf("ainda nao implementado\n");
+    return 0;
+}
+int questao3(){
+    int a[] = {1,2,3,4,5,6,7,8,9,10}, b[] = {2,4,6,8,10,12,14,16,18,20}, c[10], i;
+
+
+    return 0;
+}
+int questao2(){
+    int buscar[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, busca, i, j;
+
+    printf("Digite o valor a ser buscado: ");
+    scanf("%i", &busca);
+    for(i = 0; i < 10; i++){
+        if(buscar[i] == busca){
+            printf("O valor %i está na posição %i\n", busca, i);
+            return 0;
+        }
+    }
+
+    return 0;
+}
 int questao1(){
     int number[10], i, j;
 
@@ -26,7 +89,7 @@ int main(){
         case 1:
             questao1();
             break;
-        /*case 2:
+        case 2:
             questao2();
             break;
         case 3:
@@ -64,7 +127,7 @@ int main(){
             break;
         case 14:
             questao14();
-            break;*/
+            break;
         default:
         printf("Questao nao encontrada!");
             break;
