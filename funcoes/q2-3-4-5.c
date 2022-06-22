@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 float area_t();
 float area_c();
@@ -14,11 +15,12 @@ void display(){
     int output, key = 0;
 
     printf("========== Bem vindo ao programa ===========\n\n");
-    printf("Digite uma opção: \n1 - Calcular a area do quadrado\n2 - Calcular area do circulo\n3 - Calcular area do triangulo\n0 - Sair");
+    printf("Digite uma opção: \n1 - Calcular a area do quadrado\n2 - Calcular area do circulo\n3 - Calcular area do triangulo\n0 - Sair\n --> ");
     scanf("%i", &output);
     while (key == 0){
-        if(output < 0 || output > 5){
-            printf("Não encontrado!");
+        if(output <= 0 || output > 5){
+            system("clear");
+            printf("\nSaindo ...\n\n");
             key = 1;
         }else{
             switch (output){
@@ -45,13 +47,13 @@ void display(){
 }
 float area_t(){
     printf("area do triangulo");
-    return;
+    return 0;
 }
 float area_c(){
     printf("area do circulo");
-    return;
+    return 0;
 }
 float area_q(){
     printf("area do quadrado");
-    return;
+    return 0;
 }
