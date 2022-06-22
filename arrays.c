@@ -26,19 +26,25 @@ int questao9(){
     return 0;
 }
 int questao8(){
-    int vet[20], vet1[20], i, j, k;
+    int vet[20], vet1[20], i, j, k, l;
 
     printf("========== Digite 20 numeros ==========\n");
     for(i = 0; i < 20; i++){
         printf("Digite um numero: ");
         scanf("%i", &vet[i]);
     }
-    for(j = 0; j < 20; j++){
-        for (k = 20; k >= 0 ; k--){
+    
+    for (k = 20; k >= 0 ; k--){
+        for(j = 0; j < 20; j++){
             vet1[j] = vet[k];
         }
-        printf("%i \n", vet1[j]);
     }
+    for (l = 0; l < 20; l++){
+        printf("na posicao %i esta %i \n", l, vet1[l]);
+    }
+    
+       
+    
     
     return 0;
 }
