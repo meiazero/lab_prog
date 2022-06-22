@@ -26,24 +26,21 @@ int questao9(){
     return 0;
 }
 int questao8(){
-    int vet[20], vet1[20], i, j, k, l;
+    int vetor[20], inverso[20], i = 0, j = 19 , k = 0;
 
     printf("========== Digite 20 numeros ==========\n");
     for(i = 0; i < 20; i++){
         printf("Digite um numero: ");
-        scanf("%i", &vet[i]);
+        scanf("%i", &vetor[i]);
     }
-    
-    for (k = 20; k >= 0 ; k--){
-        for(j = 0; j < 20; j++){
-            vet1[j] = vet[k];
+    printf("===============================\n");
+
+   for(;i < 20; i++){
+        for(;j >= 0; j--){
+            vetor[i] = inverso[j];
+            printf("valor do i e: %i\n valor do j e: %i\n valor so vetor inverso na posicao %i e %i", i, j, i, vetor[i]);
         }
     }
-    for (l = 0; l < 20; l++){
-        printf("na posicao %i esta %i \n", l, vet1[l]);
-    }
-    
-       
     
     
     return 0;
