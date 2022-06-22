@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define PI 3.14159265359 
+
 float area_t();
 float area_c();
 float area_q();
@@ -26,18 +28,26 @@ void display(){
             switch (output){
             case 1:
                 //area do quadrado
-                area_t();
+                system("clear");
+                area_q();
+                key = 1;
                 break;
             case 2: 
                 //area do circulo
+                system("clear");
                 area_c();
+                key = 1;
                 break;
             case 3: 
                 //area do triangulo
+                system("clear");
                 area_t();
+                key = 1;
                 break;
             default:
+                system("clear");
                 printf("Não encontrado!");
+                key = 1;
                 break;
             }
         }
@@ -46,14 +56,35 @@ void display(){
     return;
 }
 float area_t(){
-    printf("area do triangulo");
+    float h, b, area;
+
+    printf("============ Area do triangulo ===========\n");
+    printf("Digite o valor da base do triangulo: ");
+    scanf("%f", &b);
+    printf("Digite o valor da altura do triangulo: ");
+    scanf("%f", &h);
+    area = (b * h) / 2;
     return 0;
 }
 float area_c(){
-    printf("area do circulo");
+    float raio;
+    double area;
+    
+    printf("=========== Area do circulo ===========\n");
+    printf("Digite o valor do raio do circulo: ");
+    scanf("%f", &raio);
+    area = PI * (raio * raio);
+    printf("A area do circulo de raio %.3f e igual: %lf\n", raio, area);
     return 0;
 }
 float area_q(){
-    printf("area do quadrado");
+    float l1, l2, area;
+
+    printf("=========== Area do quadrado ===========\n");
+    printf("Digite o valor de um lado: ");
+    scanf("%f", &l1);
+    l2 = l1;
+    area = l1 * l2;
+    printf("A area do quadrado de lado %2.1f e igual a: %2.1f\n", l1, area);
     return 0;
 }
